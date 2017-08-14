@@ -1,0 +1,17 @@
+<article class="panel panel-default" 
+    [ngStyle]="{backgroundColor:color}"
+    *ngIf="belongsToType(interest.type)">
+    <div class="panel-body" *ngIf="belongsToUser()">
+        {{interest.content}}
+    </div>
+    <footer class="panel-footer"  *ngIf="belongsToUser()">
+        <div class="author">
+            <!--{{interest.type}}-->
+        </div>
+        <div class="config">
+            <a (click) ="onEdit()">Edit</a>
+            <a (click) = "onDelete()">Delete</a>
+        </div>
+    </footer>
+</article>
+

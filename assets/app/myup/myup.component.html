@@ -1,0 +1,21 @@
+<div class="col-md-8 col-md-offset-2">
+    <form ngNativeValidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="number">매칭시킬 관심사 개수를 선택하세요</label>
+            <select class="form-control" id="number" name="number" ngModel>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+     <button class="btn btn-primary" type="submit">내 업 발견하기</button>
+    </form>
+    <hr>
+<div class="col-md-8 col-md-offset-2"> 
+    <app-interest 
+        [interest]="interest" 
+         *ngFor="let interest of interests">
+     </app-interest> 
+</div>
+</div>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">FindUp</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active"><a href="#">About <span class="sr-only">(current)</span></a></li>
+        <li routerLinkActive="active"><a href="#" [routerLink]="['/myup']">나의 업</a></li>
+        <li routerLinkActive="active" class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">나의 관심사 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li (click)="onSelect('나의 성과')"><a>나의 성과</a></li>
+            <li (click)="onSelect('나의 흥미')"><a>나의 흥미</a></li>
+            <li (click)="onSelect('나의 기술')"><a>나의 기술</a></li>
+            <li (click)="onSelect('나의 취미')"><a>나의 취미</a></li>
+            <li (click)="onSelect('나의 경험')"><a>나의 경험</a></li>
+            <li (click)="onSelect('나의 특기')"><a>나의 특기</a></li>
+            <li (click)="onSelect('되고 싶은 것')"><a>되고 싶은 것</a></li>
+            <li (click)="onSelect('내가 좋아하는것')"><a>내가 좋아하는것</a></li>
+            <li (click)="onSelect('배우고 싶은 것')"><a>배우고 싶은 것</a></li> 
+            <li (click)="onSelect('나의 장점')"><a>나의 장점</a></li>
+            <li (click)="onSelect('가고 싶은 곳')"><a>가고 싶은 곳</a></li> 
+            <li (click)="onSelect('관심 교육')"><a>관심 교육</a></li> 
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" *ngIf="!isLoggedIn()" [routerLink]="['/signup']">Sign Up</a></li>
+        <li><a href="#" *ngIf="!isLoggedIn()" [routerLink]="['/signin']">Sign In</a></li>
+        <li><a href="#" *ngIf="isLoggedIn()" (click)="logout()">Sign Out</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
