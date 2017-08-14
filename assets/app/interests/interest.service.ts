@@ -10,8 +10,8 @@ export class InterestService {
     private currentType: string;
     interestIsEdit = new EventEmitter<Interest>();
     
-    //private url = 'https://angular2-nodejs-test.herokuapp.com/message';
-    private url = 'http://localhost:3000/interest/';
+    private url = 'https://findup.herokuapp.com/interest/';
+    //private url = 'http://localhost:3000/interest/';
     
     constructor(private http:Http) {}
     

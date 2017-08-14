@@ -13,12 +13,12 @@ import { Injectable, EventEmitter } from "@angular/core";
 import 'rxjs/Rx';
 import { Observable } from "rxjs";
 var InterestService = (function () {
+    //private url = 'http://localhost:3000/interest/';
     function InterestService(http) {
         this.http = http;
         this.interests = []; //create empty array
         this.interestIsEdit = new EventEmitter();
-        //private url = 'https://angular2-nodejs-test.herokuapp.com/message';
-        this.url = 'http://localhost:3000/interest/';
+        this.url = 'https://findup.herokuapp.com/interest/';
     }
     InterestService.prototype.addInterest = function (interest) {
         var _this = this;
