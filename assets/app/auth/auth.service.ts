@@ -7,7 +7,7 @@ import { Observable } from "rxjs";
 @Injectable()
 export class AuthService {
     //private url = 'http://localhost:3000/';
-    private url = 'http://findup.herokuapp.com/';
+    private url = 'https://findup.herokuapp.com/';
 
     constructor(private http: Http) {
         

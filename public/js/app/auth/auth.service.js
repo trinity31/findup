@@ -15,7 +15,7 @@ var AuthService = (function () {
     function AuthService(http) {
         this.http = http;
         //private url = 'http://localhost:3000/';
-        this.url = 'http://findup.herokuapp.com/';
+        this.url = 'https://findup.herokuapp.com/';
     }
     AuthService.prototype.signup = function (user) {
         var body = JSON.stringify(user);
